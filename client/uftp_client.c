@@ -40,12 +40,12 @@ char* getPacketContents(char *file, int increment, char packetContents[PACKET_SI
 	// packetContents = malloc(PACKET_SIZE * sizeof(char));
 	int startIndex = (increment * PACKET_SIZE);
 	int endIndex = 0;
-	int j = 0;
+	int j = 0, i = 0;
 	if (startIndex == 0) 
 		endIndex = PACKET_SIZE;
 	else 
 		endIndex = startIndex + PACKET_SIZE;
-	for (int i = startIndex; i < endIndex; i+=1) {
+	for (i = startIndex; i < endIndex; i+=1) {
 		packetContents[j] = file[i];
 		j+=1;
 	}
